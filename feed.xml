@@ -3,7 +3,7 @@
     <title>dozenhacker.at</title>
     <link href="https://dozenhacker.at/feed.xml" rel="self" />
     <link href="https://dozenhacker.at" />
-    <updated>2025-10-07T16:56:25+02:00</updated>
+    <updated>2025-10-07T18:37:17+02:00</updated>
     <author>
         <name>Jörg Hotter</name>
     </author>
@@ -16,18 +16,15 @@
         </author>
         <link href="https://dozenhacker.at/testseite.html"/>
         <id>https://dozenhacker.at/testseite.html</id>
-        <media:content url="https://dozenhacker.at/media/posts/1/KA-5-Ausschnitt.jpg" medium="image" />
 
         <updated>2025-10-07T16:56:25+02:00</updated>
             <summary>
                 <![CDATA[
-                        <img src="https://dozenhacker.at/media/posts/1/KA-5-Ausschnitt.jpg" alt="" />
                     srfrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrr rrrrrrrrrrrrrrrrrrrrrrrrrrrrrrr rrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrr rrrrrrrrr rrrrr
                 ]]>
             </summary>
         <content type="html">
             <![CDATA[
-                    <p><img src="https://dozenhacker.at/media/posts/1/KA-5-Ausschnitt.jpg" class="type:primaryImage" alt="" /></p>
                 <p>srfrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrr rrrrrrrrrrrrrrrrrrrrrrrrrrrrrrr  rrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrr rrrrrrrrr rrrrr</p>
             ]]>
         </content>
