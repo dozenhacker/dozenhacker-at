@@ -3,12 +3,32 @@
     <title>dozenhacker.at</title>
     <link href="https://dozenhacker.at/feed.xml" rel="self" />
     <link href="https://dozenhacker.at" />
-    <updated>2025-10-07T18:37:17+02:00</updated>
+    <updated>2025-10-11T01:21:52+02:00</updated>
     <author>
         <name>Jörg Hotter</name>
     </author>
     <id>https://dozenhacker.at</id>
 
+    <entry>
+        <title>2.blogeintrag test</title>
+        <author>
+            <name>Jörg Hotter</name>
+        </author>
+        <link href="https://dozenhacker.at/2blogeintrag-test.html"/>
+        <id>https://dozenhacker.at/2blogeintrag-test.html</id>
+
+        <updated>2025-10-11T01:21:52+02:00</updated>
+            <summary>
+                <![CDATA[
+                    cloudflare test
+                ]]>
+            </summary>
+        <content type="html">
+            <![CDATA[
+                <p>cloudflare test</p>
+            ]]>
+        </content>
+    </entry>
     <entry>
         <title>testseite</title>
         <author>
