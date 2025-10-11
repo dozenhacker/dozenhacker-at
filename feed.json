@@ -17,26 +17,28 @@
             "summary": "cloudflare test",
             "content_html": "<p>cloudflare test</p>",
             "author": {
-                "name": "Jörg Hotter"
+                "name": "DO-Zen Meister"
             },
             "tags": [
+                   "Dozenhacker"
             ],
             "date_published": "2025-10-11T01:21:52+02:00",
-            "date_modified": "2025-10-11T01:21:52+02:00"
+            "date_modified": "2025-10-11T02:47:30+02:00"
         },
         {
             "id": "https://dozenhacker.at/testseite.html",
             "url": "https://dozenhacker.at/testseite.html",
-            "title": "testseite",
+            "title": "testseite-miau",
             "summary": "srfrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrr rrrrrrrrrrrrrrrrrrrrrrrrrrrrrrr rrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrr rrrrrrrrr rrrrr",
             "content_html": "<p>srfrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrr rrrrrrrrrrrrrrrrrrrrrrrrrrrrrrr  rrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrr rrrrrrrrr rrrrr</p>",
             "author": {
-                "name": "Jörg Hotter"
+                "name": "Schattenpfote"
             },
             "tags": [
+                   "Dozenhacker"
             ],
             "date_published": "2025-10-07T16:56:25+02:00",
-            "date_modified": "2025-10-07T18:37:17+02:00"
+            "date_modified": "2025-10-11T02:43:20+02:00"
         }
     ]
 }

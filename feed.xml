@@ -3,7 +3,7 @@
     <title>dozenhacker.at</title>
     <link href="https://dozenhacker.at/feed.xml" rel="self" />
     <link href="https://dozenhacker.at" />
-    <updated>2025-10-11T01:21:52+02:00</updated>
+    <updated>2025-10-11T02:47:30+02:00</updated>
     <author>
         <name>Jörg Hotter</name>
     </author>
@@ -12,10 +12,11 @@
     <entry>
         <title>2.blogeintrag test</title>
         <author>
-            <name>Jörg Hotter</name>
+            <name>DO-Zen Meister</name>
         </author>
         <link href="https://dozenhacker.at/2blogeintrag-test.html"/>
         <id>https://dozenhacker.at/2blogeintrag-test.html</id>
+            <category term="Dozenhacker"/>
 
         <updated>2025-10-11T01:21:52+02:00</updated>
             <summary>
@@ -30,12 +31,13 @@
         </content>
     </entry>
     <entry>
-        <title>testseite</title>
+        <title>testseite-miau</title>
         <author>
-            <name>Jörg Hotter</name>
+            <name>Schattenpfote</name>
         </author>
         <link href="https://dozenhacker.at/testseite.html"/>
         <id>https://dozenhacker.at/testseite.html</id>
+            <category term="Dozenhacker"/>
 
         <updated>2025-10-07T16:56:25+02:00</updated>
             <summary>
