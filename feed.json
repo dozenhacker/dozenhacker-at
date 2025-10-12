@@ -5,11 +5,27 @@
     "home_page_url": "https://dozenhacker.at",
     "feed_url": "https://dozenhacker.at/feed.json",
     "user_comment": "",
-    "icon": "https://dozenhacker.at/media/website/Asset-4.svg",
+    "icon": "https://dozenhacker.at/media/website/red-icon-logo.svg",
     "author": {
         "name": "Jörg Hotter"
     },
     "items": [
+        {
+            "id": "https://dozenhacker.at/dozenhacken-eine-einladung-zur-bewegung.html",
+            "url": "https://dozenhacker.at/dozenhacken-eine-einladung-zur-bewegung.html",
+            "title": "Dozenhacken: Eine Einladung zur Bewegung",
+            "summary": "Das Dozenhacken ist eine faszinierende Verbindung aus alter Spieltradition und einem modernen, dringend benötigten Ansatz zur Steigerung Fokussiertheit. Es ist kein kompliziertes Hobby von gestern, sondern eine Methode zur Selbstoptimierung – ein direkter Weg, den Kopf freizubekommen und&hellip;",
+            "content_html": "<p><strong>Das Dozenhacken ist eine faszinierende Verbindung aus alter Spieltradition und einem modernen, dringend benötigten Ansatz zur Steigerung Fokussiertheit. Es ist kein kompliziertes Hobby von gestern, sondern eine Methode zur Selbstoptimierung – ein direkter Weg, den Kopf freizubekommen und in die Wirklichkeit zurückzukehren.</strong></p>\n<h2>Der Kern: Präzision und Poesie</h2>\n<p>Im Zentrum steht die elegante, aber unnachgiebige Mechanik: Du nimmst den Dozen, einen oft schweren Wurfkreisel, und wirfst ihn so gezielt mit der Schnur, dass er eine Münze trifft und aus einem Kreis schleudert. Der Wurf ist nur dann erfolgreich, wenn der Kreisel nach dem Aufprall auf seiner Spitze weiterdreht und \"tanzt\". Dieser kurze Moment vereint kontrollierte Kraft und meditative Ruhe.</p>\n<h3>Die Methode: Warum der Wurf so wertvoll ist</h3>\n<p>Dozenhacken ist ein <strong>unkonventioneller Lerntrick</strong>. Es nutzt deine angeborene motorische Intelligenz, um deine Fähigkeit zur Konzentration zu steigern. Da du eine physische Fertigkeit erlernst, ist das Ergebnis immer echt und unbestechlich.<br>Der entscheidende Vorteil liegt in der speziellen Wurftechnik mit der Schnur:</p>\n<h3>Das Wurffenster einfach erklärt</h3>\n<p>Normalerweise verlässt ein geworfenes Objekt deine Hand sofort. Beim Dozen-Wurf aber bleibt das Objekt über die sich abwickelnde Schnur für einen kleinen Moment länger mit dir verbunden. Das nennt man das Wurffenster.</p>\n<p class=\"msg--info msg msg--highlight \">Der Nutzen: Weil dieser <strong>entscheidende Moment</strong> des Loslassens <strong>verlängert </strong>wird, hast du mehr Zeit, deinen Wurf zu steuern und zu korrigieren. Die Schnur liefert dir über deine Finger <strong>sensorisches Feedback</strong> bis zur letzten Millisekunde.</p>\n<p><strong>Der Effekt:</strong> Dieses Training schult deine Wurfpräzision und die Verbindung zwischen deinem Gehirn und deiner Hand. Es ist ein aktiver Weg, um den Geist von der Ablenkung zu befreien und ihn auf eine einzige, perfekte Handlung zu fokussieren.</p>\n<h3>Die Kultur: Vom Spiel zur Bewegung</h3>\n<p>Das Dozenhacken ist mehr als ein Solo-Spiel. Es ist eine Bewegung für alle, die eine Auszeit vom digitalen Lärm suchen.<br>Wenn du bereit bist, dich auf diese Herausforderung einzulassen – diesen kleinen, komplexen Gegenstand zu meistern, um deinen eigenen Fokus zu schärfen –, dann bist du hier genau richtig. Finde deinen Dozen, wirf ihn, und sieh zu, wie er tanzt.</p>",
+            "image": "https://dozenhacker.at/media/posts/6/Dozen-in-flames-focus.jpg",
+            "author": {
+                "name": "DO-Zen Meister"
+            },
+            "tags": [
+                   "Focus"
+            ],
+            "date_published": "2025-10-13T00:31:18+02:00",
+            "date_modified": "2025-10-13T00:33:20+02:00"
+        },
         {
             "id": "https://dozenhacker.at/2blogeintrag-test.html",
             "url": "https://dozenhacker.at/2blogeintrag-test.html",
