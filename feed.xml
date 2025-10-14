@@ -3,7 +3,7 @@
     <title>dozenhacker.at</title>
     <link href="https://dozenhacker.at/feed.xml" rel="self" />
     <link href="https://dozenhacker.at" />
-    <updated>2025-10-13T03:54:54+02:00</updated>
+    <updated>2025-10-14T23:45:04+02:00</updated>
     <author>
         <name>Jörg Hotter</name>
     </author>
@@ -100,16 +100,19 @@
         </author>
         <link href="https://dozenhacker.at/2blogeintrag-test/"/>
         <id>https://dozenhacker.at/2blogeintrag-test/</id>
+        <media:content url="https://dozenhacker.at/media/posts/5/Totzenhacken-1975-Innsbruck-Altstadt.jpg" medium="image" />
             <category term="Dozenhacker"/>
 
         <updated>2025-10-11T01:21:52+02:00</updated>
             <summary>
                 <![CDATA[
+                        <img src="https://dozenhacker.at/media/posts/5/Totzenhacken-1975-Innsbruck-Altstadt.jpg" alt="" />
                     cloudflare test
                 ]]>
             </summary>
         <content type="html">
             <![CDATA[
+                    <p><img src="https://dozenhacker.at/media/posts/5/Totzenhacken-1975-Innsbruck-Altstadt.jpg" class="type:primaryImage" alt="" /></p>
                 <p>cloudflare test</p>
             ]]>
         </content>
