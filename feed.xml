@@ -3,7 +3,7 @@
     <title>dozenhacker.at</title>
     <link href="https://dozenhacker.at/feed.xml" rel="self" />
     <link href="https://dozenhacker.at" />
-    <updated>2025-10-14T23:45:04+02:00</updated>
+    <updated>2025-10-15T04:43:14+02:00</updated>
     <author>
         <name>Jörg Hotter</name>
     </author>
@@ -124,17 +124,21 @@
         </author>
         <link href="https://dozenhacker.at/testseite/"/>
         <id>https://dozenhacker.at/testseite/</id>
+        <media:content url="https://dozenhacker.at/media/posts/1/Gustav_Wilhelm_Kraus_Innsbruck_19Jh.jpg" medium="image" />
             <category term="Dozenhacker"/>
+            <category term="Club"/>
 
         <updated>2025-10-07T16:56:25+02:00</updated>
             <summary>
                 <![CDATA[
-                    srfrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrr rrrrrrrrrrrrrrrrrrrrrrrrrrrrrrr rrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrr rrrrrrrrr rrrrr
+                        <img src="https://dozenhacker.at/media/posts/1/Gustav_Wilhelm_Kraus_Innsbruck_19Jh.jpg" alt="" />
+                    Testseite
                 ]]>
             </summary>
         <content type="html">
             <![CDATA[
-                <p>srfrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrr rrrrrrrrrrrrrrrrrrrrrrrrrrrrrrr  rrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrr rrrrrrrrr rrrrr</p>
+                    <p><img src="https://dozenhacker.at/media/posts/1/Gustav_Wilhelm_Kraus_Innsbruck_19Jh.jpg" class="type:primaryImage" alt="" /></p>
+                <p>Testseite</p>
             ]]>
         </content>
     </entry>
