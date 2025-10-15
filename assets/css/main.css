@@ -1730,6 +1730,7 @@ body.is-search-active::before {
   padding: calc(var(--baseline) * 4) calc(var(--baseline) * 6);
   position: absolute;
   pointer-events: none;
+  text-align: center;
   top: calc(100% + 20px);
   -webkit-transform: translateY(-8px) translateX(-50%);
           transform: translateY(-8px) translateX(-50%);
@@ -1739,6 +1740,13 @@ body.is-search-active::before {
   transition: opacity 0.3s ease-out, transform 0.3s ease-out, visibility 0s linear 0.3s, -webkit-transform 0.3s ease-out;
   white-space: nowrap;
   z-index: 1;
+}
+@media all and (max-width: 37.4375em) {
+  .icon-box__tooltip {
+    min-width: 16ch;
+    max-width: calc(100vw - var(--page-margin));
+    white-space: normal;
+  }
 }
 .icon-box__tooltip::before {
   content: "";
