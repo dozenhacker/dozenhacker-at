@@ -873,6 +873,10 @@ if (searchButton && searchOverlay) {
       var itemsContainer = items.length > 0 ? items[0].parentElement : root;
       if (!tabsNav || !tabList || tabButtons.length === 0) return;
 
+      // Progressive enhancement: tell Pointer Events (where supported) that vertical pan is allowed
+      // This does NOT break older iOS; JS lock below handles Touch Events.
+      try { itemsContainer.style.touchAction = 'pan-y'; } catch (e) {}
+
       if (config.useNativeControls) {
         items.forEach(it => {
           var v = it.querySelector('video');
@@ -1023,26 +1027,98 @@ if (searchButton && searchOverlay) {
         v.addEventListener('ended', () => { it.classList.remove(config.playingClass, config.pausedClass, config.initiatedClass); v.currentTime = 0; });
       });
 
-      // Swipe / Drag
-      var isDragging = false, startX = 0, dragThreshold = 50;
-      function getClientX(e) { return (e.touches && e.touches[0]?.clientX) || (e.changedTouches && e.changedTouches[0]?.clientX) || e.clientX; }
-      function handleDragStart(e) {
-        if (e.target.closest('.' + config.playButtonClass) || e.target.closest('.' + config.pauseButtonClass) || e.target.closest('.' + config.resumeButtonClass) || e.target.closest(config.navSelector)) return;
-        isDragging = true; startX = getClientX(e); itemsContainer.style.cursor = 'grabbing'; e.preventDefault();
+      // Swipe / Drag — horizontal-only on touch (vertical scroll remains native)
+      var isDragging = false;
+      var startX = 0, startY = 0;
+      var directionLocked = null; // null | 'x' | 'y'
+      var activationThreshold = 12; // px to decide direction
+      var swipeThreshold = 50;      // px to trigger tab change
+
+      function getClientXY(e) {
+        // Return { x, y } for both mouse and touch events
+        if (e.touches && e.touches[0]) return { x: e.touches[0].clientX, y: e.touches[0].clientY };
+        if (e.changedTouches && e.changedTouches[0]) return { x: e.changedTouches[0].clientX, y: e.changedTouches[0].clientY };
+        return { x: e.clientX, y: e.clientY };
       }
-      function handleDragMove(e) { if (!isDragging) return; }
-      function handleDragEnd(e) {
-        if (!isDragging) return; isDragging = false; itemsContainer.style.cursor = '';
-        var endX = getClientX(e), diff = startX - endX;
-        if (Math.abs(diff) > dragThreshold) {
-          if (diff > 0) { var nextIndex = (currentIndex + 1) % tabButtons.length; activateTab(tabButtons[nextIndex].dataset.tabTarget, false); }
-          else { var prevIndex = (currentIndex - 1 + tabButtons.length) % tabButtons.length; activateTab(tabButtons[prevIndex].dataset.tabTarget, false); }
+
+      function handleDragStart(e) {
+        // Ignore clicks on controls or nav
+        if (e.target.closest('.' + config.playButtonClass) ||
+            e.target.closest('.' + config.pauseButtonClass) ||
+            e.target.closest('.' + config.resumeButtonClass) ||
+            e.target.closest(config.navSelector)) {
+          return;
+        }
+        var p = getClientXY(e);
+        startX = p.x; startY = p.y;
+        isDragging = true;
+        directionLocked = e.type.indexOf('mouse') === 0 ? 'x' : null; // mouse drags lock to X immediately
+        itemsContainer.style.cursor = 'grabbing';
+
+        // IMPORTANT: do NOT preventDefault here for touch; we will do it only after locking to 'x'
+        if (e.type.indexOf('mouse') === 0) {
+          e.preventDefault();
         }
       }
+
+      function handleDragMove(e) {
+        if (!isDragging) return;
+        var p = getClientXY(e);
+        var dx = p.x - startX;
+        var dy = p.y - startY;
+
+        // Decide direction once movement is meaningful
+        if (directionLocked == null) {
+          if (Math.abs(dx) + Math.abs(dy) < activationThreshold) return; // not enough movement yet
+          directionLocked = Math.abs(dx) > Math.abs(dy) ? 'x' : 'y';
+        }
+
+        if (directionLocked === 'y') {
+          // Abort swipe; allow native vertical scroll
+          isDragging = false;
+          itemsContainer.style.cursor = '';
+          return;
+        }
+
+        // Horizontal swipe in progress: prevent vertical scroll while swiping
+        if (directionLocked === 'x' && e.cancelable) {
+          e.preventDefault();
+        }
+      }
+
+      function handleDragEnd(e) {
+        // If we already aborted due to vertical movement, do nothing
+        if (!isDragging && directionLocked !== 'x') {
+          directionLocked = null;
+          return;
+        }
+
+        var p = getClientXY(e);
+        var diffX = startX - p.x;
+
+        isDragging = false;
+        itemsContainer.style.cursor = '';
+
+        if (directionLocked === 'x' && Math.abs(diffX) > swipeThreshold) {
+          if (diffX > 0) {
+            var nextIndex = (currentIndex + 1) % tabButtons.length;
+            activateTab(tabButtons[nextIndex].dataset.tabTarget, false);
+          } else {
+            var prevIndex = (currentIndex - 1 + tabButtons.length) % tabButtons.length;
+            activateTab(tabButtons[prevIndex].dataset.tabTarget, false);
+          }
+        }
+
+        directionLocked = null;
+      }
+
+      // Mouse events
       itemsContainer.addEventListener('mousedown', handleDragStart);
       itemsContainer.addEventListener('mousemove', handleDragMove);
       itemsContainer.addEventListener('mouseup', handleDragEnd);
       itemsContainer.addEventListener('mouseleave', handleDragEnd);
+
+      // Touch events (passive:false so we CAN preventDefault when we detect horizontal swipe)
       itemsContainer.addEventListener('touchstart', handleDragStart, { passive: false });
       itemsContainer.addEventListener('touchmove', handleDragMove, { passive: false });
       itemsContainer.addEventListener('touchend', handleDragEnd);
@@ -1102,6 +1178,7 @@ if (searchButton && searchOverlay) {
     });
   });
 })(window.mediaTabsConfig);
+
 
 
 // Back to top
